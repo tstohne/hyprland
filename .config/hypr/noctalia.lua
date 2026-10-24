@@ -25,6 +25,14 @@ hl.window_rule({ match = { class = "^(kitty)$" }, workspace = "2" })
 hl.window_rule({ match = { class = "^(Emacs)$" }, workspace = "3" })
 hl.window_rule({ match = { class = "^(mattermost-desktop)$" }, workspace = "4" })
 
+-- ── Autostart ───────────────────────────────────────────────────
+hl.on("hyprland.start", function()
+	hl.exec_cmd("thorium-browser")
+	hl.exec_cmd("kitty")
+	hl.exec_cmd("emacs")
+	hl.exec_cmd("mattermost-desktop")
+end)
+
 -- ── IPC keybinds ────────────────────────────────────────────────
 local mainMod = "SUPER"
 local ipc = "noctalia msg "
