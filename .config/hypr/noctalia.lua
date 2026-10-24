@@ -20,7 +20,7 @@ hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true, defau
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true, default_name = "Etc" })
 
 -- ── App → workspace placement ───────────────────────────────────
-hl.window_rule({ match = { class = "^(Thorium-browser)$" }, workspace = "1" })
+hl.window_rule({ match = { class = "^(thorium-browser)$" }, workspace = "1" })
 hl.window_rule({ match = { class = "^(kitty)$" }, workspace = "2" })
 hl.window_rule({ match = { class = "^(Emacs)$" }, workspace = "3" })
 hl.window_rule({ match = { class = "^(mattermost-desktop)$" }, workspace = "4" })
