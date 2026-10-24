@@ -22,7 +22,7 @@ hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true, defau
 -- ── App → workspace placement ───────────────────────────────────
 hl.window_rule({ match = { class = "^(Thorium-browser)$" }, workspace = "1" })
 hl.window_rule({ match = { class = "^(kitty)$" }, workspace = "2" })
-hl.window_rule({ match = { class = "^(/usr/bin/emacsclient -r -a '')$" }, workspace = "3" })
+hl.window_rule({ match = { class = "^(Emacs)$" }, workspace = "3" })
 hl.window_rule({ match = { class = "^(mattermost-desktop)$" }, workspace = "4" })
 
 -- ── Autostart ───────────────────────────────────────────────────
