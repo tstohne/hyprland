@@ -29,7 +29,7 @@ hl.window_rule({ match = { class = "^(mattermost-desktop)$" }, workspace = "4" }
 hl.on("hyprland.start", function()
 	hl.exec_cmd("thorium-browser")
 	hl.exec_cmd("kitty")
-	hl.exec_cmd("sh -c 'sleep 3; /usr/bin/emacsclient -r -a ''")
+	hl.exec_cmd("emacsclient -c")
 	hl.exec_cmd("mattermost-desktop")
 end)
 
