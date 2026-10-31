@@ -43,15 +43,8 @@ hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
 hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"))
 
--- Media / hardware keys
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
-
 -- Optional extras (uncomment and pick free key combos)
--- hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. "session lock"))
+hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. "session lock"))
 -- hl.bind(mainMod .. "+D", hl.dsp.exec_cmd(ipc .. "dock-toggle"))
 -- hl.bind(mainMod .. "+B", hl.dsp.exec_cmd(ipc .. "bar-toggle"))
 
