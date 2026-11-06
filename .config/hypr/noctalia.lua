@@ -20,16 +20,16 @@ hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true, defau
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true, default_name = "Etc" })
 
 -- ── App → workspace placement ───────────────────────────────────
-hl.window_rule({ match = { class = "^(thorium-browser)$" }, workspace = "1" })
+hl.window_rule({ match = { class = "^(brave-browser)$" }, workspace = "1" })
 hl.window_rule({ match = { class = "^(kitty)$" }, workspace = "2" })
 hl.window_rule({ match = { class = "^(Emacs)$" }, workspace = "3" })
 hl.window_rule({ match = { class = "^(mattermost-desktop)$" }, workspace = "4" })
 
 -- ── Autostart ───────────────────────────────────────────────────
 hl.on("hyprland.start", function()
-	hl.exec_cmd("thorium-browser")
+	hl.exec_cmd("/opt/brave-bin/brave-browser")
 	hl.exec_cmd("kitty")
-	hl.exec_cmd("sh -c 'sleep 3; /usr/bin/emacsclient -r -a ''")
+	hl.exec_cmd("emacsclient -c")
 	hl.exec_cmd("mattermost-desktop")
 end)
 
@@ -43,15 +43,8 @@ hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
 hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"))
 
--- Media / hardware keys
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
-
 -- Optional extras (uncomment and pick free key combos)
--- hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. "session lock"))
+hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. "session lock"))
 -- hl.bind(mainMod .. "+D", hl.dsp.exec_cmd(ipc .. "dock-toggle"))
 -- hl.bind(mainMod .. "+B", hl.dsp.exec_cmd(ipc .. "bar-toggle"))
 

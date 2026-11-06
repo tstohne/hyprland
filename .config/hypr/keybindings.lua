@@ -14,9 +14,9 @@ local locked = { locked = true } -- media keys, mute
 -- =====================================================
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty")) -- Open the terminal
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("/opt/thorium-browser/thorium")) -- Open the browser
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("/opt/brave-bin/brave-browser")) -- Open the browser
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("thunar")) -- Open the filemanager
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("emacsclient -r -a ''")) -- Start Emacs
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("emacsclient -c")) -- Start Emacs
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd("galculator")) -- Open the calculator
 
 -- =====================================================
