@@ -48,6 +48,10 @@ hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. "session lock"))
 -- hl.bind(mainMod .. "+D", hl.dsp.exec_cmd(ipc .. "dock-toggle"))
 -- hl.bind(mainMod .. "+B", hl.dsp.exec_cmd(ipc .. "bar-toggle"))
 
+-- Screenshot settings
+hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"))
+
 -- Noctalia Settings window: float it at a sensible size
 hl.window_rule({
 	match = { class = "dev.noctalia.Noctalia" },
