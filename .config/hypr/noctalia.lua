@@ -51,6 +51,7 @@ hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. "session lock"))
 -- Screenshot settings
 hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen pick"))
 
 -- Noctalia Settings window: float it at a sensible size
 hl.window_rule({
