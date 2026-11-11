@@ -1,4 +1,4 @@
-#Hyprland
+# Hyprland
 
 Hyprland setup including Noctalia settings.
 The final Noctalia setup is in my Noctalia repository.
